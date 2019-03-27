@@ -1,8 +1,16 @@
+spring:
+  profiles:
+    active: 
+      -dev
+
+- - -
+
 server:
   port: 9527
 spring:
   application:
     name: MICROSERVICE-ZUUL
+  profiles: dev
 eureka:
   client:
     service-url:
@@ -16,3 +24,4 @@ zuul:
   routes:
     flat.serviceId: plat-service
     flat.path: /plat/**
+
